@@ -122,6 +122,7 @@ POWERLEVEL9K_TIME_FOREGROUND=black
 plugins=(
   git
   vi-mode
+  zsh-256color
 )
 
 source $ZSH/oh-my-zsh.sh
