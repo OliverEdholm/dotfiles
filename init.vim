@@ -7,13 +7,17 @@ Plug 'zchee/deoplete-jedi'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'alvan/vim-closetag'
 Plug 'w0rp/ale'
+Plug 'Yggdroot/indentLine'
+Plug 'vim-scripts/vim-auto-save'
 " call PlugInstall to install new plugins
 call plug#end()
 
 " basics
 filetype plugin indent on
-syntax on set number
+syntax on
+set number
 set relativenumber
 set incsearch
 set ignorecase
@@ -29,7 +33,7 @@ set nowrap
 
 " preferences
 inoremap jk <ESC>
-let mapleader = "\<Space>"
+let mapleader = ","
 set pastetoggle=<F2>
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -91,3 +95,9 @@ let g:jsx_ext_required = 0
 "let g:ale_fix_on_save = 1
 "let g:ale_javascript_prettier_eslint_executable = 'prettier-eslint'
 "let g:ale_javascript_prettier_eslint_use_global = 1
+
+" closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" autosave
+let g:auto_save=1
